@@ -10,13 +10,37 @@ projects/kuibysheva-2/site/
 ├── politika.html         Datenschutzerklärung nach 152-ФЗ
 ├── LANDINGPAGE-PLAN.md   Konzept, Dramaturgie, Design-System, offene Punkte
 └── assets/
-    ├── config.js         ← Preis, Kontakte, Formular. Einzige zu pflegende Datei
-    └── img/              Fotos in drei Größen, je als WebP und JPEG
+    ├── config.js         ← Preis, Kontakte, Formular. Für den Alltag zu pflegen
+    ├── media.js          ← Galerie und Videotour: Bilder, Kategorien, Untertitel
+    ├── img/              37 Fotos in drei Größen, je als WebP und JPEG
+    └── video/            4 Videos, H.264 Hochformat 720×1280, ohne Ton
 
 analyse/
 └── Tiefenanalyse-Kaliningrad-Kuibysheva-2.md
                           Marktanalyse Kaliningrad Juli 2026 und Wertermittlung
 ```
+
+## Galerie und Videos pflegen
+
+Galerie, Filter und Videotour bauen sich vollständig aus `assets/media.js` auf —
+im HTML steht kein einziges Galeriebild fest verdrahtet.
+
+**Neues Foto ergänzen**
+
+1. Bild in drei Größen nach `assets/img/` legen, jeweils als `.jpg` und `.webp`:
+   `name-sm` (640 px), `name-md` (1200 px), `name-lg` (2000 px lange Kante).
+2. In `assets/media.js` unter `photos` eine Zeile ergänzen:
+   `{"n":"name","c":"kitchen","t":"Подпись под фото","w":1200,"h":900}`
+   (`c` ist die Kategorie, `w`/`h` sind die Maße der `-md`-Datei).
+
+Die Zähler an den Filterknöpfen und die Reihenfolge in der Ansicht «Все»
+aktualisieren sich von selbst.
+
+**Neues Video ergänzen**
+
+Datei nach `assets/video/` legen, Standbild als `name-sm`/`name-md` nach
+`assets/img/`, dann in `media.js` unter `videos` eintragen. Empfohlen:
+H.264, Hochformat, ohne Ton, unter 5 MB je Clip.
 
 ## Seite lokal ansehen
 

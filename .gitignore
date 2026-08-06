@@ -5,6 +5,13 @@
 # Soll ein Quelldokument doch mitversioniert werden: diese Zeile loeschen.
 *.pptx
 
+# Rohmaterial der Kundenprojekte: HEIC-Originale und unkomprimierte Videos
+# (zusammen rund 250 MB). Die web-tauglichen Fassungen liegen in
+# projects/<slug>/site/assets/img und .../assets/video und sind versioniert.
+Fotos und Videos/
+*.heic
+*.HEIC
+
 # Arbeitsdateien
 .claude/
 .gstack/

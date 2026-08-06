@@ -66,18 +66,34 @@ Reihenfolge nach dem Prinzip **Atmosphäre → Verstehen → Zahl → Bitte**. D
 | # | Sektion | Aufgabe | Warum an dieser Stelle |
 |---|---|---|---|
 | 1 | **Hero** | Vertrauensfilter + Neugier‑Haken | Das Foto ist das Produkt. Ein Bild, kein Karussell — ein Karussell signalisiert, dass kein einziges Bild gut genug ist |
-| 2 | **Почему это редкий лот** — 6 Karten | Den Einwand „austauschbare Einzimmerwohnung" sofort brechen | Bevor der Preis kommt, muss die Kategorie gewechselt sein. Öffnet mit der Knappheit: 4 von 154 Wohnungen im Verkauf, 44 Stellplätze im ganzen Haus |
+| 2 | **Почему это редкий лот** — 6 Karten | Den Einwand „austauschbare Einzimmerwohnung" sofort brechen | Bevor der Preis kommt, muss die Kategorie gewechselt sein. Öffnet mit der Knappheit: 4 von 154 Wohnungen im Verkauf |
 | 3 | **Локация** (dunkel) | Nachprüfbarkeit demonstrieren | Erste Farbumkehr = visuelle Zäsur. Entfernungen mit **echten Routing‑Werten**, nicht mit Bauträger‑Marketing |
 | 4 | **Планировка** — interaktiv | Neugier in Verstehen überführen | Die wirksamste Einzelinteraktion einer Objektseite: klickbare Hotspots auf dem vermaßten Plan → Raumbeschreibung. Hier wird der Widerspruch der Headline aufgelöst |
-| 5 | **Интерьер** — Galerie mit Reitern | Emotion, Detail, Handwerk | Nach dem Verstehen kommt das Wollen. Reiter statt endlosem Scrollen, damit der Nutzer steuert |
-| 6 | **Что входит в цену** (dunkel) | Aus „mit Möbeln" eine zählbare Liste machen | **Preisvorbereitung.** Wer 24 konkrete Positionen mit Markennamen gelesen hat, bewertet die Zahl in Sektion 7 anders |
-| 7 | **Цена** | Die Zahl nennen und sofort einordnen | Kommt erst nach fünf Sektionen — dann aber vollständig: Gesamtpreis → ₽/м² → Vergleichstabelle mit Quelle und Datum → Verhandlungsposition |
-| 8 | **Для инвестора** (dunkel) | Glaubwürdigkeit durch Ehrlichkeit | Öffnet mit „ohne rosa Brille" und **nennt den Festgeldzins, der höher ist**. Wer den eigenen schwächsten Punkt zuerst nennt, wird bei allem anderen geglaubt |
-| 9 | **Дом и двор** | Das Haus verkaufen, nicht nur die Wohnung | Fassade, Eingangsbereich, Tiefgarage, BFU. Beantwortet „wo lebe ich eigentlich?" |
-| 10 | **Сделка** | Den Fernkauf entängstigen | Vier Schritte + Dokumentenliste. Adressiert genau die dokumentierte Enttäuschung von Fernkäufern |
-| 11 | **FAQ** | Die acht Einwände beantworten, die sonst zum Abbruch führen | Öffnet mit dem härtesten: „Почему дороже средней однокомнатной?" |
-| 12 | **Контакт** (dunkel) | Die Bitte | Named human, Telefon, Telegram, WhatsApp, 3‑Feld‑Formular |
-| 13 | **Footer** | Rechtliche Sauberkeit | Nicht‑Oferte‑Hinweis, Flächenvorbehalt, Hinweis dass die Fotos aus der verkauften Wohnung stammen |
+| — | **Bildband** (voll­breit) | Atem holen, Niveau zeigen | Trennt Verstehen von Erleben. Ein Bild über die volle Breite wirkt teurer als drei kleine |
+| 5 | **Видеотур** (dunkel) | Die Besichtigung vorwegnehmen | Vier Hochformat‑Clips ohne Schnitt. Für Fernkäufer der stärkste Vertrauensbeweis: unbearbeitetes Material lässt sich nicht schönen |
+| 6 | **Галерея** — 36 Fotos, filterbar | Emotion, Detail, Handwerk | Nach dem Verstehen kommt das Wollen. Sieben Kategorien mit Anzahl, Masonry, Lightbox. Startet mit 12 Bildern, damit die Seite nicht erschlägt |
+| — | **Bildband** (voll­breit) | Übergang zur Sachlichkeit | Zweite Zäsur vor dem Inventar |
+| 7 | **Что входит в цену** (dunkel) | Aus „mit Möbeln" eine zählbare Liste machen | **Preisvorbereitung.** Wer 24 konkrete Positionen mit Markennamen gelesen hat, bewertet die Zahl in Sektion 8 anders |
+| 8 | **Цена** | Den Preisstatus nennen und einordnen | Kommt erst nach sechs Sektionen. Aktuell „Цена по запросу", begründet — plus Vergleichstabelle mit Quelle und Datum |
+| 9 | **Для инвестора** (dunkel) | Glaubwürdigkeit durch Ehrlichkeit | Öffnet mit „ohne rosa Brille" und **nennt den Festgeldzins, der höher ist**. Wer den eigenen schwächsten Punkt zuerst nennt, wird bei allem anderen geglaubt |
+| 10 | **Дом и двор** | Das Haus verkaufen, nicht nur die Wohnung | Fassade, Innenhof, Eingangsbereich, BFU. Beantwortet „wo lebe ich eigentlich?" |
+| 11 | **Сделка** | Den Fernkauf entängstigen | Vier Schritte + Dokumentenliste. Adressiert genau die dokumentierte Enttäuschung von Fernkäufern |
+| 12 | **FAQ** | Die Einwände beantworten, die sonst zum Abbruch führen | Öffnet mit dem härtesten: „Почему дороже средней однокомнатной?" |
+| 13 | **Контакт** (dunkel) | Die Bitte | Named human, Telefon, WhatsApp, 3‑Feld‑Formular |
+| 14 | **Footer** | Rechtliche Sauberkeit | Nicht‑Oferte‑Hinweis, Flächenvorbehalt, Hinweis dass die Fotos aus der verkauften Wohnung stammen |
+
+### Warum Videotour vor Galerie steht
+Bewegtbild beantwortet die Frage, die Fotos offen lassen: *„Was ist zwischen den Aufnahmen?"*
+Ein ungeschnittener Rundgang kann nichts verstecken — genau deshalb wirkt er.
+Wer danach in die Galerie kommt, sucht nicht mehr nach dem Haken, sondern nach Details.
+Umgekehrt wäre die Galerie ein Bilderbuch, das der Video‑Rundgang hinterher entzaubern könnte.
+
+### Warum die Videos hochkant bleiben
+Sie wurden mit dem Telefon aufgenommen und werden überwiegend auf dem Telefon
+angesehen. Ein 9:16‑Clip füllt dort den Bildschirm; auf Querformat gezwungen würde
+er auf beiden Seiten schwarze Balken zeigen und wie eine Notlösung wirken.
+Die Aufnahme im Wohnzimmer lag als 9:16‑Bild in einem 16:9‑Container — die
+eingebrannten Balken wurden weggeschnitten, nicht mitskaliert.
 
 **Rhythmus:** hell → hell → **dunkel** → sand → hell → **dunkel** → sand → **dunkel** → hell → sand → hell → **dunkel**. Die Farbwechsel sind die Kapitelgrenzen; sie ersetzen Trennlinien und geben dem Scrollen Takt.
 
@@ -101,6 +117,35 @@ Reihenfolge nach dem Prinzip **Atmosphäre → Verstehen → Zahl → Bitte**. D
 | 12. Rechtliche Ehrlichkeit im Footer | Nicht‑Oferte, Flächen nach ЕГРН zu präzisieren, Renditerechnung keine Anlageempfehlung |
 
 > **Der wichtigste Punkt ist Nr. 4.** Der Investorenblock, der offen sagt, dass ein Bankdepot mehr Prozente bringt, ist der teuerste und wirksamste Satz der ganzen Seite. Er kostet den Investor als Käufer — und gewinnt die Glaubwürdigkeit für alle anderen Zahlen.
+
+---
+
+## 4a. Warum kein Gold — und was stattdessen Reichtum signalisiert
+
+Der naheliegende Griff bei „Premium" ist Gold. Er ist im russischen Markt der
+sicherste Weg nach unten: Gesättigtes Gold, Goldverläufe und Goldrahmen lesen sich
+dort als „евроремонт" der 2000er, also als Luxus‑Imitat. Kein einziger der 2026
+ausgezeichneten Premium‑Immobilienauftritte arbeitet mit Farbverlauf oder Signalgold.
+
+Reichtum entsteht auf dieser Seite über sechs andere Mittel:
+
+1. **Raum.** Sektionsabstände bis 156 px, Textbreite auf 62–68 Zeichen begrenzt.
+   Leere ist die teuerste Fläche einer Website — sie sagt, dass nichts um Aufmerksamkeit betteln muss.
+2. **Maßstab.** Überschriften bis 6 rem in einer kyrillischen Didone (Prata).
+   Große, ruhige Typografie wirkt souverän; viele mittelgroße Elemente wirken geschäftig.
+3. **Vollflächige Bilder.** Zwei Bildbänder über die gesamte Breite plus ein bildfüllender Hero.
+   Ein Bild, das den Bildschirm füllt, behauptet nichts — es zeigt.
+4. **Zwei Farben plus ein Metall.** Warmes Anthrazit, warmes Weiß, gebürstetes Messing
+   (`#B08D57`) ausschließlich als Haarlinie, Ziffer und aktiver Zustand — nie als Fläche.
+5. **Materialnähe.** Die Palette stammt aus der Wohnung selbst: Eichenton, Greige der
+   Wände, das Petrol des Sofas. Deshalb wirkt die Seite wie zu diesem Objekt gehörig
+   und nicht wie eine Vorlage mit ausgetauschten Fotos.
+6. **Zurückhaltung in der Bewegung.** Enthüllen statt Springen, 600–750 ms, keine
+   Rotation, kein Bounce. Teure Dinge bewegen sich langsam.
+
+Der siebte, unsichtbare Faktor: **Genauigkeit.** Geprüfte Gehminuten, Quellen an jeder
+Marktzahl, ein offen benannter Nachteil im Investorenblock. Nichts wirkt wohlhabender
+als jemand, der es nicht nötig hat, zu übertreiben.
 
 ---
 

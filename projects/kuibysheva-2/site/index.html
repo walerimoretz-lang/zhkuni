@@ -7,7 +7,7 @@
 <meta name="description" content="Готовая дизайнерская 1-комнатная квартира 42,35 м² в ЖК «Университет», ул. Куйбышева 2, Калининград. Ленинградский район, напротив БФУ им. Канта, в десяти минутах от Верхнего озера. Мебель, техника Bosch, умный дом, кабинет на лоджии. Продаёт собственник.">
 <meta property="og:title" content="42 м², которые живут как 60 — ЖК «Университет», Калининград">
 <meta property="og:description" content="Готовая дизайнерская квартира у Верхнего озера. Заезжайте с одним чемоданом.">
-<meta property="og:image" content="assets/img/bedroom-01-lg.jpg">
+<meta property="og:image" content="assets/img/living-02-lg.jpg">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#12100E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,7 @@
 <!-- Prata: hochkontrastige Didone mit nativem Kyrillisch (russischer Premium-Standard).
      Golos Text: kyrillisch-first Grotesk, beste Lesbarkeit für russischen Fließtext. -->
 <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Prata&display=swap" rel="stylesheet">
-<link rel="preload" as="image" fetchpriority="high" href="assets/img/bedroom-01-lg.webp" type="image/webp">
+<link rel="preload" as="image" fetchpriority="high" href="assets/img/bedroom-02-lg.webp" type="image/webp">
 
 <!--
   ============================================================================
@@ -92,8 +92,8 @@ section[id]{scroll-margin-top:76px}
 .rooms li i,.card__n,.contact__big,.opt tr.total td,.step::before,.sticky b{font-weight:400}
 
 /* Typo-Skala */
-.h-hero{font-family:var(--f-display);font-size:clamp(2.6rem,7.2vw,5.4rem);line-height:1.02;letter-spacing:-.025em}
-.h1{font-family:var(--f-display);font-size:clamp(2rem,4.6vw,3.4rem);line-height:1.1;letter-spacing:-.02em}
+.h-hero{font-family:var(--f-display);font-size:clamp(2.7rem,7.6vw,6rem);line-height:1.0;letter-spacing:-.028em}
+.h1{font-family:var(--f-display);font-size:clamp(2.1rem,5vw,3.9rem);line-height:1.08;letter-spacing:-.022em}
 .h2{font-size:clamp(1.25rem,2.2vw,1.6rem);font-weight:600;letter-spacing:-.01em}
 .h3{font-size:1.06rem;font-weight:600;letter-spacing:0}
 .lead{font-size:clamp(1.05rem,1.5vw,1.24rem);line-height:1.6;color:#4A423A;font-weight:300}
@@ -107,9 +107,14 @@ section[id]{scroll-margin-top:76px}
 .num{font-family:var(--f-display);font-variant-numeric:lining-nums tabular-nums}
 
 /* Abschnittsrhythmus */
-.sec{padding:clamp(72px,9vw,132px) 0}
+.sec{padding:clamp(80px,10vw,156px) 0}
 .sec-tight{padding:clamp(52px,6vw,88px) 0}
-.sec-dark{background:var(--ink);color:var(--sand)}
+.sec-dark{background:var(--ink);color:var(--sand);position:relative;isolation:isolate}
+/* Sehr zurueckhaltende Vignette: gibt den dunklen Flaechen Tiefe ohne Effekt-Optik */
+.sec-dark::before{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(120% 80% at 50% 0%,rgba(176,141,87,.09),transparent 62%);
+}
 .sec-dark .lead{color:#B9AE9F}
 .sec-dark .dim{color:var(--muted-lt)}
 .sec-sand{background:var(--sand)}
@@ -193,7 +198,9 @@ section[id]{scroll-margin-top:76px}
 }
 
 /* ============================ 5. HERO ============================ */
-.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;background:var(--ink);overflow:hidden}
+/* «safe flex-end»: bei zu wenig Hoehe rutscht der Inhalt nicht unter die Kopfzeile */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;
+  align-items:safe flex-end;background:var(--ink);overflow:hidden}
 .hero__bg{position:absolute;inset:0}
 .hero__bg img{width:100%;height:100%;object-fit:cover;object-position:52% 42%;
   animation:slowzoom 26s var(--ease) forwards}
@@ -207,7 +214,7 @@ section[id]{scroll-margin-top:76px}
 .hero__in{position:relative;z-index:2;width:100%;padding:118px 0 34px;color:#fff}
 .hero__addr{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:16px}
 .hero__addr .dot{width:5px;height:5px;border-radius:50%;background:var(--brass)}
-.hero h1{color:#fff;max-width:15ch;margin-bottom:.26em}
+.hero h1{color:#fff;max-width:15ch;margin-bottom:.36em}
 .hero__sub{max-width:56ch;color:#D8CFC2;font-size:clamp(1rem,1.55vw,1.2rem);line-height:1.6;font-weight:300}
 .hero__cta{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;margin:26px 0 22px}
 .hero__pricelink{
@@ -238,12 +245,20 @@ section[id]{scroll-margin-top:76px}
 }
 
 /* Kurze Viewports: Hero verdichten, damit die Faktenzeile sichtbar bleibt */
-@media (max-height:860px) and (min-width:861px){
-  .h-hero{font-size:clamp(2.2rem,5vw,3.6rem)}
+@media (max-height:900px) and (min-width:861px){
+  .h-hero{font-size:clamp(2rem,3.9vw,3.3rem)}
   .hero__in{padding-top:104px}
-  .hero__sub{font-size:1rem;line-height:1.5}
+  .hero__sub{font-size:.98rem;line-height:1.5;max-width:62ch}
+  .hero__cta{margin:22px 0 18px}
+  .facts{margin-top:20px}
   .facts div{padding:12px 18px 2px 0}
-  .facts b{font-size:1.28rem}
+  .facts b{font-size:1.24rem}
+  .hero .scrollhint{display:none}
+}
+@media (max-height:780px) and (min-width:861px){
+  .h-hero{font-size:clamp(1.9rem,3.2vw,2.7rem)}
+  .hero__in{padding-top:96px}
+  .hero__trust{display:none}
 }
 .scrollhint{position:absolute;bottom:22px;right:24px;z-index:3;display:flex;align-items:center;gap:10px;
   color:#A39889;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase}
@@ -253,8 +268,13 @@ section[id]{scroll-margin-top:76px}
 
 /* ============================ 6. VALUE CARDS ============================ */
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}
-.card{background:var(--paper);padding:clamp(26px,3vw,40px)}
-.card__n{font-family:var(--f-display);font-size:.9rem;color:var(--brass);display:block;margin-bottom:16px}
+.card{background:var(--paper);padding:clamp(28px,3.4vw,46px);transition:background .4s}
+.card:hover{background:#fff}
+.card__n{
+  font-family:var(--f-display);font-size:1.5rem;color:var(--brass);display:block;
+  margin-bottom:20px;line-height:1;position:relative;padding-bottom:16px
+}
+.card__n::after{content:"";position:absolute;left:0;bottom:0;width:26px;height:1px;background:var(--brass);opacity:.45}
 .card h3{margin-bottom:.5em;font-size:1.14rem}
 .card p{color:#5C544B;font-size:.955rem;line-height:1.62}
 @media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}}
@@ -468,7 +488,109 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
 .sticky span{display:block;font-size:.66rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted-lt);font-family:var(--f-text)}
 @media(max-width:860px){.sticky{display:flex}body{padding-bottom:0}}
 
-/* ============================ 17. FOOTER ============================ */
+/* ============================ 17. FULL-BLEED BILDBAND ============================ */
+.band{position:relative;height:clamp(320px,58vh,620px);overflow:hidden;background:var(--ink)}
+.band img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.04)}
+.band::after{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(to top,rgba(10,9,8,.9) 0%,rgba(10,9,8,.62) 30%,rgba(10,9,8,.1) 68%,rgba(10,9,8,.42) 100%),
+    linear-gradient(to right,rgba(10,9,8,.55),rgba(10,9,8,0) 55%);
+}
+.band__txt{
+  position:absolute;left:0;right:0;bottom:0;z-index:2;padding:0 0 clamp(28px,4vw,56px);
+  color:#fff;
+}
+.band__txt .wrap{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px}
+.band__txt b{font-family:var(--f-display);font-weight:400;font-size:clamp(1.5rem,3.4vw,2.6rem);
+  letter-spacing:-.02em;line-height:1.15;max-width:22ch;display:block}
+.band__txt span{font-size:.79rem;letter-spacing:.16em;text-transform:uppercase;color:#BDB2A3}
+
+/* ============================ 18. VIDEOTOUR ============================ */
+.vtrack{
+  display:grid;grid-auto-flow:column;grid-auto-columns:minmax(240px,1fr);gap:16px;
+  overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;
+  scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.25) transparent;
+}
+.vtrack::-webkit-scrollbar{height:6px}
+.vtrack::-webkit-scrollbar-thumb{background:rgba(255,255,255,.22);border-radius:99px}
+@media(min-width:900px){.vtrack{grid-auto-columns:1fr;overflow:visible}}
+.vcard{
+  position:relative;scroll-snap-align:start;border-radius:var(--r);overflow:hidden;
+  background:#000;aspect-ratio:9/16;cursor:pointer;isolation:isolate;
+}
+.vcard img,.vcard video{width:100%;height:100%;object-fit:cover;display:block}
+.vcard img{transition:transform .8s var(--ease),opacity .4s}
+.vcard:hover img{transform:scale(1.05)}
+.vcard::after{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(to top,rgba(8,7,6,.86),rgba(8,7,6,.05) 45%,rgba(8,7,6,.35));
+  transition:opacity .4s;
+}
+.vcard.playing::after,.vcard.playing .vcard__meta,.vcard.playing .vcard__play{opacity:0;pointer-events:none}
+.vcard__play{
+  position:absolute;top:50%;left:50%;translate:-50% -50%;z-index:3;
+  width:64px;height:64px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(251,249,246,.92);color:var(--ink);transition:.3s var(--ease);
+}
+.vcard__play::before{content:"";border-left:16px solid currentColor;border-top:10px solid transparent;
+  border-bottom:10px solid transparent;margin-left:4px}
+.vcard:hover .vcard__play{transform:scale(1.08);background:#fff}
+.vcard__meta{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:20px 18px;color:#fff;transition:opacity .4s}
+.vcard__meta b{display:block;font-family:var(--f-display);font-weight:400;font-size:1.2rem;letter-spacing:-.01em}
+.vcard__meta span{display:block;font-size:.83rem;color:#BDB2A3;margin-top:4px}
+.vcard__dur{
+  position:absolute;top:14px;right:14px;z-index:3;font-size:.72rem;letter-spacing:.1em;
+  padding:.32em .7em;border-radius:99px;background:rgba(8,7,6,.55);color:#EDE6DC;
+  backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.16)
+}
+
+/* ============================ 19. GROSSE GALERIE ============================ */
+.gfilter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:clamp(22px,3vw,34px)}
+/* Auf dem Handy als eine wischbare Zeile statt drei umgebrochener Reihen */
+@media(max-width:760px){
+  .gfilter{
+    flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x proximity;
+    margin-left:-24px;margin-right:-24px;padding:2px 24px 10px;
+    scrollbar-width:none;-ms-overflow-style:none
+  }
+  .gfilter::-webkit-scrollbar{display:none}
+  .gfilter button{scroll-snap-align:start;flex:0 0 auto}
+}
+.gfilter button{
+  padding:.62em 1.2em;border-radius:999px;border:1px solid var(--line);background:#fff;
+  font-size:.88rem;font-weight:500;transition:.25s var(--ease);white-space:nowrap
+}
+.gfilter button:hover{border-color:var(--brass)}
+.gfilter button.on{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.gfilter button i{font-style:normal;opacity:.5;margin-left:.45em;font-size:.82em}
+
+.masonry{columns:3;column-gap:14px}
+@media(max-width:1000px){.masonry{columns:2}}
+@media(max-width:560px){.masonry{columns:1}}
+.masonry figure{
+  break-inside:avoid;margin:0 0 14px;position:relative;overflow:hidden;border-radius:10px;
+  background:var(--sand);cursor:zoom-in;display:block
+}
+.masonry img{width:100%;height:auto;display:block;transition:transform .8s var(--ease)}
+.masonry figure:hover img{transform:scale(1.045)}
+.masonry figcaption{
+  position:absolute;left:0;right:0;bottom:0;padding:40px 16px 14px;color:#fff;font-size:.85rem;
+  line-height:1.4;background:linear-gradient(to top,rgba(10,9,8,.85),transparent);
+  opacity:0;transition:opacity .35s
+}
+.masonry figure:hover figcaption{opacity:1}
+@media(hover:none){.masonry figcaption{opacity:1}}
+.gmore{display:flex;justify-content:center;margin-top:clamp(26px,3vw,40px)}
+.gcount{font-size:.9rem;color:var(--muted);margin-left:auto;align-self:center}
+
+/* Lightbox erweitert */
+.lb__counter{position:absolute;top:22px;left:24px;color:#BDB2A3;font-size:.85rem;
+  font-variant-numeric:tabular-nums;letter-spacing:.06em}
+.lb figure{margin:0;display:grid;place-items:center;max-height:88vh}
+.lb__cap{max-width:min(1100px,90vw);margin:0 auto;line-height:1.45}
+
+/* ============================ 20. FOOTER ============================ */
 .ftr{background:var(--ink);color:var(--muted);padding:46px 0 34px;border-top:1px solid rgba(255,255,255,.09)}
 .ftr__top{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:baseline;
   padding-bottom:24px;margin-bottom:24px;border-bottom:1px solid rgba(255,255,255,.09)}
@@ -483,7 +605,8 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
   <a href="#why"><span>Обзор</span><i></i></a>
   <a href="#location"><span>Локация</span><i></i></a>
   <a href="#plan"><span>Планировка</span><i></i></a>
-  <a href="#interior"><span>Интерьер</span><i></i></a>
+  <a href="#video"><span>Видеотур</span><i></i></a>
+  <a href="#interior"><span>Галерея</span><i></i></a>
   <a href="#included"><span>Комплектация</span><i></i></a>
   <a href="#price"><span>Цена</span><i></i></a>
   <a href="#deal"><span>Сделка</span><i></i></a>
@@ -506,8 +629,8 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
 <section class="hero" id="top">
   <div class="hero__bg">
     <picture>
-      <source srcset="assets/img/bedroom-01-lg.webp" type="image/webp">
-      <img src="assets/img/bedroom-01-lg.jpg" alt="Спальная зона с зеркальной перегородкой в стиле лофт" fetchpriority="high">
+      <source srcset="assets/img/bedroom-02-lg.webp" type="image/webp">
+      <img src="assets/img/bedroom-02-lg.jpg" alt="Спальная зона: мягкое изголовье и световая линия по потолку" fetchpriority="high">
     </picture>
   </div>
 
@@ -721,29 +844,66 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
   </div>
 </section>
 
-<!-- ==================== 4. INTERIEUR ==================== -->
+<!-- ==================== BILDBAND ==================== -->
+<section class="band" aria-hidden="true">
+  <picture>
+    <source srcset="assets/img/living-02-lg.webp" type="image/webp">
+    <img src="assets/img/living-02-lg.jpg" loading="lazy" alt="">
+  </picture>
+  <div class="band__txt"><div class="wrap">
+    <b>Свет здесь работает на четыре сценария — от утреннего до ночного</b>
+    <span>Гостиная · 23,96 м²</span>
+  </div></div>
+</section>
+
+<!-- ==================== 4. VIDEOTOUR ==================== -->
+<section class="sec sec-dark" id="video">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Видеотур</span>
+      <h2 class="h1" style="color:#fff">Пройдите по квартире,<br>не выходя из дома</h2>
+      <p class="lead">
+        Четыре записи без монтажа и без склеек: так квартира выглядит на самом деле.
+        Снято вертикально — смотрите с телефона так же, как будете смотреть вживую.
+      </p>
+    </div>
+    <div class="vtrack" id="vtrack"></div>
+    <p class="tiny dim" style="margin-top:20px">
+      Записи без звука и без обработки. Полный показ по видеосвязи проведу лично —
+      покажу любой угол, откроем каждый шкаф.
+    </p>
+  </div>
+</section>
+
+<!-- ==================== 5. GALERIE ==================== -->
 <section class="sec" id="interior">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">Интерьер</span>
+      <span class="eyebrow">Галерея</span>
       <h2 class="h1">Сделано по проекту,<br>а не «как получилось»</h2>
       <p class="lead">
         У квартиры есть вымеренный дизайн-проект с расстановкой мебели — и он реализован
-        целиком, до последней розетки. Все фотографии — настоящие, без рендеров и ретуши.
+        целиком, до последней розетки. Все фотографии сделаны в этой квартире:
+        без рендеров, без ретуши и без чужих интерьеров.
       </p>
     </div>
 
-    <div class="tabs" id="tabs">
-      <button class="tab on" data-g="living">Гостиная и спальня</button>
-      <button class="tab" data-g="kitchen">Кухня</button>
-      <button class="tab" data-g="bath">Ванная</button>
-      <button class="tab" data-g="office">Кабинет на лоджии</button>
-      <button class="tab" data-g="storage">Прихожая и хранение</button>
-      <button class="tab" data-g="house">Дом и подъезд</button>
-    </div>
-
-    <div class="grid" id="gal"></div>
+    <div class="gfilter" id="gfilter"></div>
+    <div class="masonry" id="gal"></div>
+    <div class="gmore"><button class="btn btn-dark" id="gmore" type="button"></button></div>
   </div>
+</section>
+
+<!-- ==================== BILDBAND ==================== -->
+<section class="band" aria-hidden="true">
+  <picture>
+    <source srcset="assets/img/bedroom-03-lg.webp" type="image/webp">
+    <img src="assets/img/bedroom-03-lg.jpg" loading="lazy" alt="">
+  </picture>
+  <div class="band__txt"><div class="wrap">
+    <b>Реечная стена, тёплый дуб и подвесы вместо ламп</b>
+    <span>Спальная зона</span>
+  </div></div>
 </section>
 
 <!-- ==================== 5. WAS INKLUSIVE ==================== -->
@@ -1012,27 +1172,27 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
       </p>
     </div>
     <div class="grid">
-      <figure class="g-w8 g-h3" data-src="assets/img/facade-lg.jpg" data-cap="Фасад и закрытый двор с детской площадкой">
-        <picture><source srcset="assets/img/facade-md.webp" type="image/webp">
-        <img src="assets/img/facade-md.jpg" width="1100" height="825" loading="lazy" alt="Фасад ЖК Университет и внутренний двор"></picture>
+      <figure class="g-w6 g-h1" data-src="assets/img/house-yard-lg.jpg" data-cap="Закрытый двор с детской и спортивной площадкой">
+        <picture><source srcset="assets/img/house-yard-md.webp" type="image/webp">
+        <img src="assets/img/house-yard-md.jpg" width="1200" height="900" loading="lazy" alt="Внутренний двор ЖК Университет с детской площадкой"></picture>
         <figcaption>Закрытый двор, детская и спортивная площадка</figcaption>
       </figure>
-      <figure class="g-w4 g-h3" data-src="assets/img/entrance-01-lg.jpg" data-cap="Лифтовой холл: панорамный лифт, плитка, зеркальная стена">
-        <picture><source srcset="assets/img/entrance-01-md.webp" type="image/webp">
-        <img src="assets/img/entrance-01-md.jpg" width="1100" height="825" loading="lazy" alt="Лифтовой холл подъезда"></picture>
-        <figcaption>Панорамный лифт, отделанный холл, зеркальная стена</figcaption>
+      <figure class="g-w6 g-h1" data-src="assets/img/facade-lg.jpg" data-cap="Фасад ЖК «Университет», сдан в октябре 2021 года">
+        <picture><source srcset="assets/img/facade-md.webp" type="image/webp">
+        <img src="assets/img/facade-md.jpg" width="1100" height="825" loading="lazy" alt="Фасад ЖК Университет"></picture>
+        <figcaption>Монолит с керамоблоком 38 см, девять этажей</figcaption>
       </figure>
-      <figure class="g-w4 g-h1" data-src="assets/img/entrance-02-lg.jpg" data-cap="Входная группа с пандусом и почтой">
-        <picture><source srcset="assets/img/entrance-02-md.webp" type="image/webp">
-        <img src="assets/img/entrance-02-md.jpg" width="825" height="1100" loading="lazy" alt="Входная группа подъезда"></picture>
-        <figcaption>Входная группа, почтовые ящики</figcaption>
+      <figure class="g-w4 g-h1" data-src="assets/img/house-lobby-lg.jpg" data-cap="Лифтовой холл: панорамный лифт и зеркальная стена">
+        <picture><source srcset="assets/img/house-lobby-md.webp" type="image/webp">
+        <img src="assets/img/house-lobby-md.jpg" width="1200" height="900" loading="lazy" alt="Лифтовой холл подъезда"></picture>
+        <figcaption>Панорамный лифт в каждом подъезде</figcaption>
       </figure>
-      <figure class="g-w4 g-h1" data-src="assets/img/light-01-lg.jpg" data-cap="Дизайнерское освещение в квартире">
-        <picture><source srcset="assets/img/light-01-md.webp" type="image/webp">
-        <img src="assets/img/light-01-md.jpg" width="825" height="1100" loading="lazy" alt="Минималистичное бра на стене"></picture>
-        <figcaption>Свет подобран под каждую зону</figcaption>
+      <figure class="g-w4 g-h2" data-src="assets/img/house-stairs-lg.jpg" data-cap="Входная группа и почтовые ящики">
+        <picture><source srcset="assets/img/house-stairs-md.webp" type="image/webp">
+        <img src="assets/img/house-stairs-md.jpg" width="825" height="1100" loading="lazy" alt="Входная группа подъезда"></picture>
+        <figcaption>Отделанная входная группа</figcaption>
       </figure>
-      <figure class="g-w8 g-h1" data-src="assets/img/university-lg.jpg" data-cap="БФУ им. И. Канта напротив дома">
+      <figure class="g-w4 g-h1" data-src="assets/img/university-lg.jpg" data-cap="БФУ им. И. Канта напротив дома">
         <picture><source srcset="assets/img/university-md.webp" type="image/webp">
         <img src="assets/img/university-md.jpg" width="1100" height="825" loading="lazy" alt="Корпус БФУ им. Канта"></picture>
         <figcaption>Кампус БФУ им. И. Канта — напротив</figcaption>
@@ -1268,6 +1428,7 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
 <!-- ==================== LIGHTBOX ==================== -->
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Просмотр фотографии">
   <button class="lb__x" id="lbX" aria-label="Закрыть">×</button>
+  <div class="lb__counter" id="lbNum"></div>
   <button class="lb__nav lb__prev" id="lbPrev" aria-label="Предыдущее фото">‹</button>
   <img id="lbImg" alt="" hidden>
   <button class="lb__nav lb__next" id="lbNext" aria-label="Следующее фото">›</button>
@@ -1275,6 +1436,7 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
 </div>
 
 <script src="assets/config.js"></script>
+<script src="assets/media.js"></script>
 <script>
 /* ===================== KONFIGURATION ANWENDEN =====================
    Alles, was der Eigentümer ändern soll, steht in assets/config.js.
@@ -1334,75 +1496,129 @@ if (chan) {
   ).join('');
 }
 
-/* ===================== GALERIEDATEN ===================== */
-const GAL = {
-  living: [
-    ['bedroom-01','Спальная зона: раздвижная перегородка в чёрном профиле с зеркалом','p','w6'],
-    ['living-01','Гостиная: диван-трансформер, ТВ-зона, встроенное хранение','l','w6'],
-    ['wardrobe-01','Встроенный шкаф с подсветкой и выдвижными модулями','p','w4'],
-    ['light-01','Дизайнерское освещение: минималистичные бра','p','w4'],
-    ['hall-01','Коридор: зеркальный шкаф-купе во всю стену','p','w4']
-  ],
-  kitchen: [
-    ['kitchen-01','Гарнитур без ручек, каменная столешница, встроенная техника','l','w6'],
-    ['kitchen-03','Столовая зона: раскладной стол на 4 персоны и ТВ','p','w6'],
-    ['kitchen-04','Газовая варочная панель и посудомоечная машина Bosch','l','w6'],
-    ['kitchen-02','Холодильник Bosch 2 м, NoFrost / VitaFresh','p','w6'],
-    ['kitchen-05','Сушка, посуда — квартира укомплектована полностью','p','w6'],
-    ['kitchen-06','Верхние шкафы: стекло, посуда, системы хранения','p','w6']
-  ],
-  bath: [
-    ['bath-01','Душевая со стеклянной дверью, подвесной унитаз, подсветка ниш','p','w6'],
-    ['smarthome','Настенный термостат умного дома Homematic IP','p','w6']
-  ],
-  office: [
-    ['loggia-01','Кабинет на утеплённой лоджии: стол на заказ, шкафы, LAN, подсветка','p','w6'],
-    ['storage-01','Продуманное хранение: всё убрано за фасады','l','w6']
-  ],
-  storage: [
-    ['hall-01','Прихожая: зеркальный шкаф-купе, белые двери с чёрной фурнитурой','p','w6'],
-    ['wardrobe-01','Внутреннее наполнение шкафа: штанга, полки, ящики, свет','p','w6'],
-    ['storage-01','Хозяйственный шкаф: гладильная доска, инвентарь','l','w6']
-  ],
-  house: [
-    ['facade','Фасад и закрытый двор с детской площадкой','l','w6'],
-    ['entrance-01','Лифтовой холл: панорамный лифт, плитка, зеркальная стена','l','w6'],
-    ['entrance-02','Входная группа, почтовые ящики','p','w6'],
-    ['university','БФУ им. И. Канта — напротив дома','l','w6']
-  ]
-};
-const DIM = { l:[1100,825], p:[825,1100] };
-const SPECIAL = { parking:[733,1100], floorplan:[1100,1036] };
-
+/* ===================== GALERIE (datengetrieben) =====================
+   Quelle: assets/media.js — dort stehen Fotos, Kategorien und Videos.
+   Die Seite baut Filter, Raster und Videokarten daraus selbst auf. */
+const MEDIA = window.LOT_MEDIA || { categories: [], photos: [], videos: [] };
 const gal = document.getElementById('gal');
+const gfilter = document.getElementById('gfilter');
+const gmore = document.getElementById('gmore');
 
-function renderGal(key){
-  gal.innerHTML = GAL[key].map(([id,cap,or,w])=>{
-    const d = SPECIAL[id] || DIM[or];
-    const h = or === 'l' ? 'g-h1' : 'g-h2';
-    return `<figure class="g-${w} ${h}" data-src="assets/img/${id}-lg.jpg" data-cap="${cap}">
-      <picture>
-        <source srcset="assets/img/${id}-md.webp" type="image/webp">
-        <img src="assets/img/${id}-md.jpg" width="${d[0]}" height="${d[1]}" loading="lazy" alt="${cap}">
-      </picture>
-      <figcaption>${cap}</figcaption>
-    </figure>`;
+const STEP = 12;             // wie viele Fotos zunaechst sichtbar sind
+let curCat = 'all';
+let shown = STEP;
+
+const esc = s => String(s).replace(/"/g, '&quot;');
+
+function inCat(p){ return curCat === 'all' || p.c === curCat; }
+
+/* In der Ansicht «Все» die Kategorien im Reissverschluss mischen, damit oben
+   Vielfalt steht und nicht vier fast gleiche Aufnahmen nebeneinander. */
+function ordered(){
+  const list = MEDIA.photos.filter(inCat);
+  if (curCat !== 'all') return list;
+  const buckets = new Map();
+  list.forEach(p => { (buckets.get(p.c) || buckets.set(p.c, []).get(p.c)).push(p); });
+  const rows = [...buckets.values()];
+  const out = [];
+  for (let i = 0; out.length < list.length; i++){
+    rows.forEach(r => { if (r[i]) out.push(r[i]); });
+  }
+  return out;
+}
+
+function figureHTML(p){
+  return `<figure data-src="assets/img/${p.n}-lg.jpg" data-cap="${esc(p.t)}">
+    <picture>
+      <source srcset="assets/img/${p.n}-sm.webp 640w, assets/img/${p.n}-md.webp 1200w"
+              sizes="(max-width:560px) 92vw, (max-width:1000px) 46vw, 30vw" type="image/webp">
+      <img src="assets/img/${p.n}-md.jpg" width="${p.w}" height="${p.h}"
+           loading="lazy" decoding="async" alt="${esc(p.t)}">
+    </picture>
+    <figcaption>${p.t}</figcaption>
+  </figure>`;
+}
+
+function renderFilter(){
+  gfilter.innerHTML = MEDIA.categories.map(c => {
+    const n = c.id === 'all' ? MEDIA.photos.length
+                             : MEDIA.photos.filter(p => p.c === c.id).length;
+    if(!n) return '';
+    return `<button type="button" data-cat="${c.id}"${c.id === curCat ? ' class="on"' : ''}>${c.label}<i>${n}</i></button>`;
   }).join('');
 }
-renderGal('living');
 
-document.getElementById('tabs').addEventListener('click', e => {
-  const b = e.target.closest('.tab'); if(!b) return;
-  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on', t===b));
-  renderGal(b.dataset.g);
-});
+function renderGal(){
+  const list = ordered();
+  gal.innerHTML = list.slice(0, shown).map(figureHTML).join('');
+  const rest = list.length - shown;
+  gmore.textContent = rest > 0 ? `Показать ещё ${rest}` : 'Свернуть галерею';
+  gmore.parentElement.style.display = list.length > STEP ? '' : 'none';
+}
+
+if (gfilter && gal){
+  renderFilter();
+  renderGal();
+  gfilter.addEventListener('click', e => {
+    const b = e.target.closest('button[data-cat]'); if(!b) return;
+    curCat = b.dataset.cat; shown = STEP;
+    [...gfilter.children].forEach(x => x.classList.toggle('on', x === b));
+    renderGal();
+  });
+  gmore.addEventListener('click', () => {
+    const total = ordered().length;
+    if (shown >= total){ shown = STEP; gal.scrollIntoView({block:'start'}); }
+    else shown = total;
+    renderGal();
+  });
+}
+
+/* ===================== VIDEOTOUR ===================== */
+const vtrack = document.getElementById('vtrack');
+if (vtrack){
+  vtrack.innerHTML = MEDIA.videos.map(v => `
+    <div class="vcard" data-video="assets/video/${v.n}.mp4">
+      <picture>
+        <source srcset="assets/img/${v.n}-sm.webp 520w, assets/img/${v.n}-md.webp 900w"
+                sizes="(max-width:900px) 70vw, 24vw" type="image/webp">
+        <img src="assets/img/${v.n}-md.jpg" width="${v.w}" height="${v.h}"
+             loading="lazy" decoding="async" alt="Видеообзор: ${esc(v.title)}">
+      </picture>
+      <span class="vcard__dur">${v.dur}</span>
+      <span class="vcard__play" aria-hidden="true"></span>
+      <div class="vcard__meta"><b>${v.title}</b><span>${v.sub}</span></div>
+    </div>`).join('');
+
+  vtrack.addEventListener('click', e => {
+    const card = e.target.closest('.vcard'); if(!card) return;
+    if (card.classList.contains('playing')){
+      const v = card.querySelector('video');
+      if (v) v.paused ? v.play() : v.pause();
+      return;
+    }
+    vtrack.querySelectorAll('.vcard.playing').forEach(c => {
+      c.classList.remove('playing');
+      const old = c.querySelector('video'); if (old) old.remove();
+      const pic = c.querySelector('picture'); if (pic) pic.hidden = false;
+    });
+    const vid = document.createElement('video');
+    vid.src = card.dataset.video;
+    vid.playsInline = true; vid.controls = true; vid.autoplay = true;
+    vid.preload = 'auto'; vid.muted = false; vid.setAttribute('controlsList','nodownload');
+    card.querySelector('picture').hidden = true;
+    card.appendChild(vid);
+    card.classList.add('playing');
+    vid.play().catch(() => {});
+  });
+}
 
 /* ===================== LIGHTBOX ===================== */
-const lb=document.getElementById('lb'), lbImg=document.getElementById('lbImg'), lbCap=document.getElementById('lbCap');
+const lb=document.getElementById('lb'), lbImg=document.getElementById('lbImg'),
+      lbCap=document.getElementById('lbCap'), lbNum=document.getElementById('lbNum');
 let pool=[], idx=0;
 
 function openLb(fig){
-  pool = [...fig.closest('.grid').querySelectorAll('figure')];
+  pool = [...fig.parentElement.querySelectorAll('figure[data-src]')];
   idx = pool.indexOf(fig);
   show();
   lb.classList.add('on');
@@ -1413,14 +1629,20 @@ function show(){
   lbImg.hidden = false;
   lbImg.src = f.dataset.src;
   lbImg.alt = f.dataset.cap;
-  lbCap.textContent = f.dataset.cap + '  ·  ' + (idx+1) + ' / ' + pool.length;
+  lbCap.textContent = f.dataset.cap;
+  if (lbNum) lbNum.textContent = (idx+1) + ' / ' + pool.length;
+  /* Nachbarbilder vorladen, damit das Blättern nicht stockt */
+  [idx+1, idx-1].forEach(i => {
+    const n = pool[(i + pool.length) % pool.length];
+    if (n) new Image().src = n.dataset.src;
+  });
 }
 function closeLb(){ lb.classList.remove('on'); document.body.style.overflow=''; }
 function step(n){ idx = (idx + n + pool.length) % pool.length; show(); }
 
 document.addEventListener('click', e => {
-  const fig = e.target.closest('.grid figure');
-  if(fig){ openLb(fig); }
+  const fig = e.target.closest('figure[data-src]');
+  if(fig) openLb(fig);
 });
 document.getElementById('lbX').onclick = closeLb;
 document.getElementById('lbPrev').onclick = e => { e.stopPropagation(); step(-1); };
@@ -1432,6 +1654,13 @@ document.addEventListener('keydown', e => {
   if(e.key === 'ArrowLeft') step(-1);
   if(e.key === 'ArrowRight') step(1);
 });
+/* Wischen auf dem Handy */
+let tx = 0;
+lb.addEventListener('touchstart', e => { tx = e.changedTouches[0].clientX; }, {passive:true});
+lb.addEventListener('touchend', e => {
+  const dx = e.changedTouches[0].clientX - tx;
+  if (Math.abs(dx) > 45) step(dx < 0 ? 1 : -1);
+}, {passive:true});
 
 /* ===================== GRUNDRISS-HOTSPOTS ===================== */
 const rooms = document.getElementById('rooms');
