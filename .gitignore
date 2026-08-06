@@ -1,0 +1,18 @@
+# Quelldokument: 49 MB, wird von der Website nicht gebraucht.
+# Alle Fotos, der Grundriss und die Objektdaten sind bereits nach
+# landing/assets/img und in die Analyse übernommen. Bleibt bewusst
+# ausserhalb des Repos, damit Vercel bei jedem Deploy nicht 49 MB klont.
+# Soll es doch mitversioniert werden: diese Zeile loeschen.
+*.pptx
+
+# Arbeitsdateien
+.claude/
+.gstack/
+*.tmp
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Node (falls später ein Build dazukommt)
+node_modules/
+.vercel/
