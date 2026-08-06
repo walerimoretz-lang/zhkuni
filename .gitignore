@@ -1,8 +1,8 @@
-# Quelldokument: 49 MB, wird von der Website nicht gebraucht.
-# Alle Fotos, der Grundriss und die Objektdaten sind bereits nach
-# landing/assets/img und in die Analyse übernommen. Bleibt bewusst
-# ausserhalb des Repos, damit Vercel bei jedem Deploy nicht 49 MB klont.
-# Soll es doch mitversioniert werden: diese Zeile loeschen.
+# Quelldokumente der Kundenprojekte (PowerPoint, 49 MB im Fall Kuibysheva).
+# Fotos, Grundriss und Objektdaten sind bereits nach
+# projects/<slug>/site/assets/img und in die Analyse uebernommen. Bleibt
+# bewusst ausserhalb des Repos, damit ein Deploy nicht 49 MB mitklont.
+# Soll ein Quelldokument doch mitversioniert werden: diese Zeile loeschen.
 *.pptx
 
 # Arbeitsdateien
