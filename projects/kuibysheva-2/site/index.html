@@ -398,11 +398,12 @@ section[id]{scroll-margin-top:76px}
 .opt h3{font-size:1.2rem;margin-bottom:.6em}
 .opt table{width:100%;border-collapse:collapse;margin:18px 0 6px;font-size:.94rem}
 .opt td{padding:9px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.opt td:first-child{padding-right:18px}
 .opt td:last-child{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:600}
 .opt tr:last-child td{border-bottom:0;padding-top:14px;font-size:1.05rem}
 .opt tr.total td{border-top:2px solid var(--ink);font-family:var(--f-display);font-size:1.25rem;font-weight:500}
 .opt ul li{padding:5px 0 5px 22px;position:relative;font-size:.92rem;color:#5C544B}
-.opt ul li::before{content:"2";position:absolute;left:0;color:var(--brass)}
+.opt ul li::before{content:"•";position:absolute;left:0;color:var(--brass)}
 
 /* ============================ 12. CALCULATOR ============================ */
 .calc{display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,4vw,56px);align-items:start}
@@ -655,8 +656,8 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
       <p class="hero__sub">
         Отдельная кухня, спальня, гостиная и рабочий кабинет на утеплённой лоджии.
         Дом 2021 года напротив БФУ им. И. Канта, до набережной Верхнего озера
-        десять минут пешком. Собрать такую же квартиру с нуля стоит около 11,7 млн ₽
-        и восемь месяцев работы. Здесь всё уже сделано, ключи вы получаете в день сделки.
+        десять минут пешком. Собрать такую же квартиру с нуля стоит около 15 млн ₽
+        и год работы. Здесь всё уже сделано, ключи вы получаете в день сделки.
       </p>
 
       <div class="hero__cta">
@@ -1027,16 +1028,16 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
         <span class="opt__tag a">Вариант А</span>
         <h3>Купить «голую» квартиру и сделать так же</h3>
         <table>
-          <tr><td>Квартира 42 м² в новом доме района, предчистовая отделка</td><td>≈ 7 000 000 ₽</td></tr>
+          <tr><td>Квартира 42 м² в новом доме района, предчистовая отделка</td><td>≈ 8 000 000 ₽</td></tr>
           <tr><td>Проект интерьера и авторский надзор</td><td>≈ 150 000 ₽</td></tr>
-          <tr><td>Ремонт «под ключ» дизайнерского уровня</td><td>≈ 2 200 000 ₽</td></tr>
-          <tr><td>Кухня на заказ верхнего ценового уровня</td><td>≈ 300 000 ₽</td></tr>
-          <tr><td>Встроенная техника Bosch и Samsung</td><td>≈ 450 000 ₽</td></tr>
-          <tr><td>Шкафы, перегородка в стиле лофт, стеновые панели</td><td>≈ 520 000 ₽</td></tr>
-          <tr><td>Утепление и отделка лоджии, электрика, LAN</td><td>≈ 200 000 ₽</td></tr>
-          <tr><td>Мебель, свет, текстиль, посуда</td><td>≈ 600 000 ₽</td></tr>
-          <tr><td>Умный дом и кондиционер</td><td>≈ 280 000 ₽</td></tr>
-          <tr class="total"><td>Итого</td><td>≈ 11 700 000 ₽</td></tr>
+          <tr><td>Ремонт «под ключ» дизайнерского уровня</td><td>≈ 2 900 000 ₽</td></tr>
+          <tr><td>Кухня на заказ верхнего ценового уровня</td><td>≈ 700 000 ₽</td></tr>
+          <tr><td>Встроенная техника Bosch и Samsung</td><td>≈ 700 000 ₽</td></tr>
+          <tr><td>Шкафы, стеклянная раздвижная перегородка, стеновые панели</td><td>≈ 800 000 ₽</td></tr>
+          <tr><td>Утепление и отделка лоджии, электрика, LAN</td><td>≈ 400 000 ₽</td></tr>
+          <tr><td>Мебель, свет, текстиль, посуда</td><td>≈ 850 000 ₽</td></tr>
+          <tr><td>Умный дом и кондиционер</td><td>≈ 500 000 ₽</td></tr>
+          <tr class="total"><td>Итого</td><td>≈ 15 000 000 ₽</td></tr>
         </table>
         <ul style="margin-top:18px">
           <li>От восьми до двенадцати месяцев без квартиры и без арендного дохода</li>
@@ -1213,17 +1214,12 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
       </p>
     </div>
     <div class="grid">
-      <figure class="g-w6 g-h1" data-src="assets/img/house-yard-lg.jpg" data-cap="Закрытый двор с детской и спортивной площадкой">
+      <figure class="g-w8 g-h3" data-src="assets/img/house-yard-lg.jpg" data-cap="Закрытый двор с детской и спортивной площадкой">
         <picture><source srcset="assets/img/house-yard-md.webp" type="image/webp">
         <img src="assets/img/house-yard-md.jpg" width="1200" height="900" loading="lazy" alt="Внутренний двор ЖК Университет с детской площадкой"></picture>
-        <figcaption>Закрытый двор, детская и спортивная площадка</figcaption>
+        <figcaption>Закрытый двор с детской и спортивной площадкой</figcaption>
       </figure>
-      <figure class="g-w6 g-h1" data-src="assets/img/facade-lg.jpg" data-cap="Фасад ЖК «Университет», сдан в октябре 2021 года">
-        <picture><source srcset="assets/img/facade-md.webp" type="image/webp">
-        <img src="assets/img/facade-md.jpg" width="1100" height="825" loading="lazy" alt="Фасад ЖК Университет"></picture>
-        <figcaption>Монолитный каркас, керамоблок 38 см, девять этажей</figcaption>
-      </figure>
-      <figure class="g-w4 g-h1" data-src="assets/img/house-lobby-lg.jpg" data-cap="Лифтовой холл: панорамный лифт и зеркальная стена">
+      <figure class="g-w4 g-h3" data-src="assets/img/house-lobby-lg.jpg" data-cap="Лифтовой холл: панорамный лифт и зеркальная стена">
         <picture><source srcset="assets/img/house-lobby-md.webp" type="image/webp">
         <img src="assets/img/house-lobby-md.jpg" width="1200" height="900" loading="lazy" alt="Лифтовой холл подъезда"></picture>
         <figcaption>Панорамный лифт в каждом подъезде</figcaption>
