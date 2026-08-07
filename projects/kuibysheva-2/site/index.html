@@ -204,12 +204,22 @@ section[id]{scroll-margin-top:76px}
 .hero__bg{position:absolute;inset:0}
 .hero__bg img{width:100%;height:100%;object-fit:cover;object-position:52% 42%;
   animation:slowzoom 26s var(--ease) forwards}
+/* Bewegtes Titelbild: liegt ueber dem Standbild und blendet sich ein,
+   sobald genug geladen ist. Faellt es aus, bleibt einfach das Foto stehen. */
+.hero__vid{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% 42%;
+  opacity:0;transition:opacity 1.2s var(--ease);pointer-events:none;display:none;
+  /* Helle Szenen im Ablauf duerfen den Text nicht schlucken */
+  filter:brightness(.84) saturate(.96)
+}
+.hero__vid.ready{display:block}
+.hero__vid.on{opacity:1}
 @keyframes slowzoom{from{transform:scale(1.075)}to{transform:scale(1)}}
 .hero__bg::after{
-  content:"";position:absolute;inset:0;
+  content:"";position:absolute;inset:0;z-index:1;
   background:
-    linear-gradient(to top,rgba(10,9,8,.93) 0%,rgba(10,9,8,.72) 26%,rgba(10,9,8,.18) 58%,rgba(10,9,8,.42) 100%),
-    linear-gradient(to right,rgba(10,9,8,.55),rgba(10,9,8,0) 62%);
+    linear-gradient(to top,rgba(10,9,8,.94) 0%,rgba(10,9,8,.77) 28%,rgba(10,9,8,.22) 60%,rgba(10,9,8,.45) 100%),
+    linear-gradient(to right,rgba(10,9,8,.64),rgba(10,9,8,.08) 56%,rgba(10,9,8,0) 74%);
 }
 .hero__in{position:relative;z-index:2;width:100%;padding:118px 0 34px;color:#fff}
 .hero__addr{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:16px}
@@ -638,10 +648,14 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
 <!-- ==================== HERO ==================== -->
 <section class="hero" id="top">
   <div class="hero__bg">
+    <!-- Standbild traegt den ersten Eindruck und ist sofort da.
+         Das Video legt sich darueber, sobald es abspielt. -->
     <picture>
       <source srcset="assets/img/bedroom-02-lg.webp" type="image/webp">
       <img src="assets/img/bedroom-02-lg.jpg" alt="Спальная зона: мягкое изголовье и световая линия по потолку" fetchpriority="high">
     </picture>
+    <video id="heroVid" class="hero__vid" muted playsinline loop preload="none"
+           aria-hidden="true" tabindex="-1"></video>
   </div>
 
   <div class="hero__in">
@@ -1572,6 +1586,52 @@ if (chan) {
     `<a href="${h}"${h.startsWith('http') ? ' target="_blank" rel="noopener"' : ''}>${t}</a>`
   ).join('');
 }
+
+/* ===================== BEWEGTES TITELBILD =====================
+   Gleiche Technik wie auf gaengigen Premiumseiten: ein stumm loopendes
+   MP4 im Hintergrund, davor das Standbild als Poster. Zusaetzlich hier:
+   quer oder hoch je nach Bildschirm, kein Laden bei Sparmodus oder
+   langsamer Verbindung, und bei prefers-reduced-motion bleibt das Foto. */
+(function heroVideo(){
+  const vid = document.getElementById('heroVid');
+  if (!vid) return;
+
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const conn = navigator.connection || {};
+  const slow = conn.saveData === true || /^(slow-2g|2g|3g)$/.test(conn.effectiveType || '');
+  if (reduced || slow) return;                 // Foto bleibt stehen
+
+  const portrait = matchMedia('(max-aspect-ratio: 1/1)').matches;
+  vid.src = portrait ? 'assets/video/hero-portrait.mp4' : 'assets/video/hero-wide.mp4';
+  vid.preload = 'auto';
+  vid.classList.add('ready');
+
+  vid.addEventListener('canplay', () => {
+    vid.play().then(() => {
+      requestAnimationFrame(() => vid.classList.add('on'));
+    }).catch(() => {                            // Autoplay verweigert
+      vid.classList.remove('ready');
+    });
+  }, { once: true });
+
+  vid.addEventListener('error', () => vid.classList.remove('ready'), { once: true });
+
+  /* Ausserhalb des Sichtfelds anhalten, damit das Video keine Rechenzeit
+     und keinen Akku verbraucht, waehrend man weiter unten liest. */
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => {
+      if (!vid.classList.contains('ready')) return;
+      if (e.isIntersecting) vid.play().catch(() => {});
+      else vid.pause();
+    });
+  }, { threshold: 0.05 });
+  io.observe(vid);
+
+  document.addEventListener('visibilitychange', () => {
+    if (!vid.classList.contains('ready')) return;
+    document.hidden ? vid.pause() : vid.play().catch(() => {});
+  });
+})();
 
 /* ===================== GALERIE (datengetrieben) =====================
    Quelle: assets/media.js — dort stehen Fotos, Kategorien und Videos.
