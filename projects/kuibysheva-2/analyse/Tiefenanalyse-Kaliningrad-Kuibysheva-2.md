@@ -378,6 +378,33 @@ Lage: 8. OG von 9, 5. Aufgang. Ausrichtung zum begrünten Innenhof / Campus.
 
 Das Straßenmittel der 1‑Zimmer‑Wohnungen (182.564 RUB/m²) ließ sich bei erneuter Abfrage **nicht reproduzieren**; die Seite lieferte nur eine Spanne von 144.695 bis 252.841 RUB/m² über 12 Angebote. Der Wert wird deshalb nicht weiterverwendet.
 
+**A1. Nachtrag vom 7. August 2026: ein Vergleichsobjekt im eigenen Haus**
+
+Vom Eigentümer beigebracht, Quelle Avito:
+
+| Merkmal | Angabe |
+|---|---|
+| Adresse | **ул. Куйбышева 2, dasselbe Haus** |
+| Fläche / Etage | 43,8 m², 6. von 9 |
+| Preis | **13.900.000 RUB = 317.352 RUB/m²** |
+| Ausstattung | Euro‑Renovierung (nicht Designer), Küche 11 m², Wohnfläche 17 m², Loggia, Ankleide, Fußbodenheizung |
+| Möbel | nur Küche und Schlafplätze |
+| Geräte | **nur Waschmaschine** |
+| Rechtsstand | 1 Eigentümer, letzter Eigentümerwechsel 22.05.2023, keine Belastungen |
+| Hinweis im Inserat | „ТОРГ ВОЗМОЖЕН" |
+
+**Einordnung.** Das ist das relevanteste Vergleichsobjekt, das überhaupt existiert: gleiches Haus, gleicher Typ, 1,45 m² größer, aber **deutlich schlechter ausgestattet** als das Bewertungsobjekt. Auf 42,35 m² übertragen entspräche dieser Quadratmeterpreis 13,44 Mio. RUB.
+
+Drei Einschränkungen, die verhindern, dass daraus ein neuer Wertanker wird:
+
+1. Es ist ein **Angebotspreis mit ausdrücklich angebotenem Verhandlungsspielraum**.
+2. Der letzte Eigentümerwechsel liegt im Mai 2023, die Fünfjahresfrist ist also nicht erfüllt. Verkäufer schlagen die NDFL‑Last regelmäßig auf den Angebotspreis auf.
+3. Damit stehen in diesem Haus nun **drei Wohnungen gleichzeitig unverkauft** (Rohbau zu 232.900, diese zu 317.352, dazu die 2‑Zimmer‑Wohnung). Die Preisvorstellungen im Haus sind hoch und werden vom Markt weiterhin nicht bestätigt.
+
+**Wirkung auf die Bewertung.** Die beobachtete Angebots‑Obergrenze im eigenen Haus steigt von 248.164 auf 317.352 RUB/m². Das **stärkt die Verhandlungsposition und erlaubt einen höheren Angebotspreis**, verschiebt den wahrscheinlichen Abschlusspreis aber nicht in gleichem Maß, weil kein einziger dieser Angebotspreise bisher geräumt hat. Der empfohlene Angebotspreis lässt sich vertretbar von 9,7 auf **10,4 bis 10,9 Mio. RUB** anheben; die Aussage zum wahrscheinlichsten Abschluss (8,8 bis 9,4 Mio.) bleibt bestehen, bis ein tatsächlicher Abschluss in diesem Haus beobachtbar ist.
+
+**Nebenbefund, sachlich verwertet.** Das Inserat bestätigt für das Haus: geschlossener Hof mit Schranke, Kinder‑ und Sportspielplatz, **Tiefgarage mit Zufahrt vom Hof**, Baujahr 2021, neun Geschosse, Deckenhöhe 2,8 m. Die Parkfrage ist damit belegt beantwortbar und steht jetzt auf der Landingpage.
+
 **B. Designer‑1‑Zimmer‑Wohnungen 37–50 m² im Ленинградский район**
 
 | Adresse | Fläche | Etage | RUB/m² |

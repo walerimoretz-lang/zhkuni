@@ -389,7 +389,8 @@ section[id]{scroll-margin-top:76px}
 @media(max-width:820px){.compare{grid-template-columns:1fr}}
 .opt{border:1px solid var(--line);border-radius:var(--r);padding:clamp(24px,3vw,36px);background:#fff;
   display:flex;flex-direction:column}
-.opt .btn{margin-top:auto}
+.opt .btn{margin-top:auto;margin-bottom:0}
+.opt ul{margin-bottom:24px}
 .opt.hi{border:2px solid var(--ink);box-shadow:var(--shadow)}
 .opt__tag{display:inline-block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;
   padding:.4em .85em;border-radius:999px;margin-bottom:18px}
@@ -1064,19 +1065,25 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
           <li>Таких квартир в городе полтора процента от всех однокомнатных в продаже</li>
           <li>Цена ниже, чем стоит собрать такую же. Назову её в первом же ответе</li>
         </ul>
-        <a class="btn btn-dark" style="margin-top:24px;width:100%" href="#contact">Спросить цену и расчёт</a>
+        <a class="btn btn-dark" style="width:100%" href="#contact">Спросить цену и расчёт</a>
       </article>
     </div>
 
     <div class="narrow" style="margin-top:44px;background:var(--ink);color:var(--sand);
          padding:clamp(26px,3.4vw,40px);border-radius:var(--r)">
       <span class="eyebrow">Проверка рынком · август 2026</span>
-      <h3 class="h2" style="color:#fff;margin:.5em 0 .6em">За голые стены рядом просят столько же</h3>
+      <h3 class="h2" style="color:#fff;margin:.5em 0 .6em">В этом же доме за метр просят 317 000 ₽</h3>
       <table style="width:100%;border-collapse:collapse;font-size:.94rem">
+        <tr style="border-bottom:1px solid rgba(255,255,255,.14)">
+          <td style="padding:11px 0">Этот же дом, ул. Куйбышева, 2 · 43,8 м² · 6/9 ·
+            <b>евроремонт</b>. Из мебели кухня и спальные места, из техники
+            стиральная машина. Цена 13 900 000 ₽</td>
+          <td style="padding:11px 0;text-align:right;white-space:nowrap"><b>317 352 ₽/м²</b></td>
+        </tr>
         <tr style="border-bottom:1px solid rgba(255,255,255,.14)">
           <td style="padding:11px 0">ул. Куйбышева, 27Б · 42,7 м² · 7/9 · дизайнерский ремонт,
             <b>без мебели и техники</b></td>
-          <td style="padding:11px 0;text-align:right;white-space:nowrap"><b>255 300 ₽/м²</b></td>
+          <td style="padding:11px 0;text-align:right;white-space:nowrap">255 300 ₽/м²</td>
         </tr>
         <tr style="border-bottom:1px solid rgba(255,255,255,.14)">
           <td style="padding:11px 0">Этот же дом, ул. Куйбышева, 2 · 45,3 м² · 4/9 ·
@@ -1100,8 +1107,11 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
         </tr>
       </table>
       <p class="tiny" style="color:var(--muted-lt);margin-top:18px">
-        Данные по объявлениям о продаже в Калининграде на 5 августа 2026 года. Это
-        <b style="color:#CDC3B5">цены предложения других продавцов</b>, а не цены сделок.
+        Данные по объявлениям о продаже в Калининграде, срез на август 2026 года. Это
+        <b style="color:#CDC3B5">цены предложения других продавцов</b>, а не цены сделок,
+        и по каждой из них ещё будет торг. Обратите внимание на первую строку: это
+        соседняя квартира в этом же подъезде, на два этажа ниже. Ремонт там евро,
+        а не дизайнерский, из мебели кухня и кровати, из техники одна стиральная машина.
         Дизайнерских однокомнатных в городе 167 из 11 500 в продаже, то есть полтора
         процента. В нужной площади от 38 до 48 м² и в двух центральных районах их
         остаётся пара десятков, и почти все продаются пустыми. Выборку пришлю файлом,
@@ -1208,9 +1218,9 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radiu
         ЖК «Университет» построила компания «Зелёный Город». Монолитный каркас
         с керамоблоком 38 см, пять секций, девять этажей, 154 квартиры, потолки 2,80 метра.
         В каждой квартире своё газовое отопление, в каждом подъезде панорамный лифт.
-        Территория закрыта, во дворе детская и спортивная площадка и видеонаблюдение,
-        на первом этаже торговая галерея. Здесь живут собственники, а не посуточные
-        арендаторы, поэтому в подъезде тихо.
+        Двор закрыт шлагбаумом, там детская и спортивная площадка и видеонаблюдение,
+        в доме есть подземный паркинг. На первом этаже торговая галерея. Здесь живут
+        собственники, а не посуточные арендаторы, поэтому в подъезде тихо.
       </p>
     </div>
     <div class="grid">
